@@ -1,0 +1,20 @@
+{
+  "sales": [
+    { "month": "January", "total": 1200 },
+    { "month": "February", "total": 1500 },
+    { "month": "March", "total": 1800 }
+  ],
+  "topDishes": [
+    { "name": "Hamburguesa", "orders": 50 },
+    { "name": "Pizza", "orders": 40 },
+    { "name": "Gaseosa", "orders": 30 }
+  ],
+  "orders": [
+    { "id": 1, "customer": "Juan Pérez", "items": ["Hamburguesa", "Gaseosa"], "total": 15 },
+    { "id": 2, "customer": "María López", "items": ["Pizza"], "total": 12 }
+  ],
+  "users": [
+    { "id": 1, "name": "Admin", "email": "admin@example.com", "role": "admin" },
+    { "id": 2, "name": "User1", "email": "user1@example.com", "role": "customer" }
+  ]
+}
