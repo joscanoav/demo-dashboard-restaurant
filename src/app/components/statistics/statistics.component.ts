@@ -6,11 +6,12 @@ import { ChartModule } from 'primeng/chart';
   selector: 'app-statistics',
   templateUrl: './statistics.component.html',
   styleUrl: './statistics.component.css',
-  imports: [ChartModule] // Importa el módulo de gráficos
+  imports: [ChartModule] 
 })
 export class StatisticsComponent implements OnInit {
   salesData: any[] = [];
   topDishes: any[] = [];
+  chartOptions: any;
 
   constructor(private dataService: DataService) {}
   chartData: any;
@@ -40,8 +41,13 @@ export class StatisticsComponent implements OnInit {
           }
         ]
       };
+
+      this.chartOptions = {
+        responsive: true,
+        maintainAspectRatio: false
+      };
     });
-}
+  }
 }
 
 

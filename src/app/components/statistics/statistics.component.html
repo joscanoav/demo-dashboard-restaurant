@@ -1,4 +1,10 @@
-<h1>hola</h1>
-<p-chart type="bar" [data]="chartData"></p-chart>
+<h3>Resumen de ventas anuales</h3>
+<div class="charts-container">
+  <div class="chart-box">
+    <p-chart type="bar" [data]="chartData" [options]="chartOptions"></p-chart>
+  </div>
 
-<p-chart type="pie" [data]="dishesChartData"></p-chart>
+  <div class="chart-box">
+    <p-chart type="pie" [data]="dishesChartData" [options]="chartOptions"></p-chart>
+  </div>
+</div>

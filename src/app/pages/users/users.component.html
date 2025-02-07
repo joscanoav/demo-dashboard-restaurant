@@ -1,6 +1,8 @@
 <h2>Usuarios</h2>
 
-<button pButton type="button" icon="pi pi-plus" label="Agregar Usuario" (click)="openNewUserModal()"></button>
+<button pButton type="button" icon="pi pi-plus" label="Agregar Usuario"
+    class="p-button-success mb-3" (click)="openNewUserModal()">
+</button>
 
 <p-table [value]="users" [paginator]="true" [rows]="5">
     <ng-template pTemplate="header">
@@ -9,7 +11,7 @@
             <th>Nombre</th>
             <th>Email</th>
             <th>Rol</th>
-            <th>Acciones</th>
+            <th style="text-align: center;">Acciones</th>
         </tr>
     </ng-template>
 
@@ -19,37 +21,50 @@
             <td>{{ user.name }}</td>
             <td>{{ user.email }}</td>
             <td>{{ user.role }}</td>
-            <td>
-                <button pButton icon="pi pi-pencil" class="p-button-rounded p-button-warning" (click)="editUser(user)"></button>
-                <button pButton icon="pi pi-trash" class="p-button-rounded p-button-danger" (click)="deleteUser(user.id)"></button>
+            <td style="text-align: center;">
+                <button
+                    pButton
+                    icon="pi pi-pencil"
+                    label="Editar"
+                    class="p-button-rounded p-button-primary mr-2"
+                    (click)="editUser(user)">
+                </button>
+                <button
+                    pButton
+                    icon="pi pi-trash"
+                    label="Eliminar"
+                    class="p-button-rounded p-button-danger"
+                    (click)="deleteUser(user.id)">
+                </button>
             </td>
         </tr>
     </ng-template>
 </p-table>
 
-<!-- Modal para crear/editar usuario -->
-<p-dialog [(visible)]="userDialog" [modal]="true" header="Usuario" [closable]="false">
-    <div class="p-fluid">
-        <div class="p-field">
-            <label for="name">Nombre</label>
-            <input id="name" type="text" pInputText [(ngModel)]="user.name">
-        </div>
-        <div class="p-field">
-            <label for="email">Email</label>
-            <input id="email" type="email" pInputText [(ngModel)]="user.email">
-        </div>
-        <div class="p-field">
-            <label for="role">Rol</label>
-            <select id="role" [(ngModel)]="user.role" class="p-inputtext">
-                <option value="admin">Admin</option>
-                <option value="customer">Cliente</option>
-            </select>
-        </div>
-    </div>
+<p-dialog [(visible)]="userDialog" [modal]="true" header="Usuario" [closable]="false" [style]="{width: '30vw'}">
+  <div class="p-fluid">
+      <div class="p-field">
+          <label for="name">Nombre</label>
+          <input id="name" type="text" pInputText [(ngModel)]="user.name">
+      </div>
+      <div class="p-field">
+          <label for="email">Email</label>
+          <input id="email" type="email" pInputText [(ngModel)]="user.email">
+      </div>
+      <div class="p-field">
+          <label for="role">Rol</label>
+          <select id="role" [(ngModel)]="user.role" class="p-inputtext">
+              <option value="admin">Admin</option>
+              <option value="customer">Cliente</option>
+          </select>
+      </div>
+  </div>
 
-    <p-footer>
-        <button pButton label="Cancelar" icon="pi pi-times" class="p-button-text" (click)="userDialog = false"></button>
-        <button pButton label="Guardar" icon="pi pi-check" (click)="saveUser()"></button>
-    </p-footer>
+  <div class="p-dialog-footer">
+      <button pButton label="Cancelar" icon="pi pi-times" class="p-button-text" (click)="closeDialog()"></button>
+      <button pButton label="Guardar" icon="pi pi-check" class="p-button-success" (click)="saveUser()"></button>
+  </div>
 </p-dialog>
+
+
 
