@@ -1,10 +1,18 @@
 <h3>Resumen de ventas anuales</h3>
 <div class="charts-container">
-  <div class="chart-box">
+  <p-card header="Ventas por mes">
     <p-chart type="bar" [data]="chartData" [options]="chartOptions"></p-chart>
-  </div>
+  </p-card>
 
-  <div class="chart-box">
+  <p-card header="Ventas por categoría">
     <p-chart type="pie" [data]="dishesChartData" [options]="chartOptions"></p-chart>
-  </div>
+  </p-card>
+
+  <p-card header="Estado de pedidos">
+    <p-chart type="doughnut" [data]="ordersChartData" [options]="chartOptions"></p-chart>
+  </p-card>
 </div>
+
+
+
+

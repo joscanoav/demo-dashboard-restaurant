@@ -2,7 +2,16 @@
   "sales": [
     { "month": "January", "total": 1200 },
     { "month": "February", "total": 1500 },
-    { "month": "March", "total": 1800 }
+    { "month": "March", "total": 1800 },
+    { "month": "April", "total": 1600 },
+    { "month": "May", "total": 2000 },
+    { "month": "June", "total": 2200 },
+    { "month": "July", "total": 2500 },
+    { "month": "August", "total": 2400 },
+    { "month": "September", "total": 2300 },
+    { "month": "October", "total": 2600 },
+    { "month": "November", "total": 2700 },
+    { "month": "December", "total": 3000 }
   ],
   "topDishes": [
     { "name": "Hamburguesa", "orders": 50 },
@@ -12,11 +21,15 @@
   "orders": [
     { "id": 1, "customer": "Juan Pérez", "items": ["Hamburguesa", "Gaseosa"], "total": 15, "date": "2025-02-01", "status": "Completed" },
     { "id": 2, "customer": "María López", "items": ["Pizza"], "total": 12, "date": "2025-02-02", "status": "Pending" },
-    { "id": 3, "customer": "Carlos Ramírez", "items": ["Pizza", "Gaseosa"], "total": 18, "date": "2025-02-03", "status": "Cancelled" }
+    { "id": 3, "customer": "Carlos Ramírez", "items": ["Pizza", "Gaseosa"], "total": 18, "date": "2025-02-03", "status": "Cancelled" },
+    { "id": 4, "customer": "Ana Torres", "items": ["Pasta", "Ensalada"], "total": 22, "date": "2025-02-05", "status": "Completed" },
+    { "id": 5, "customer": "Luis Gómez", "items": ["Hamburguesa"], "total": 10, "date": "2025-02-06", "status": "Pending" }
   ],
   "users": [
     { "id": 1, "name": "Admin", "email": "admin@example.com", "role": "admin" },
-    { "id": 2, "name": "User1", "email": "user1@example.com", "role": "customer" }
+    { "id": 2, "name": "User1", "email": "user1@example.com", "role": "customer" },
+    { "id": 3, "name": "User2", "email": "user2@example.com", "role": "customer" }
   ]
 }
+
 
